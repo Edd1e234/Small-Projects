@@ -10,7 +10,7 @@
 
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.Flashcard.Frontend.Classes">
+            fx:controller="com.Flashcard.Frontend.Menu.Classes">
    <children>
       <SplitPane dividerPositions="0.6722408026755853" layoutX="-2.0" layoutY="1.0" prefHeight="400.0" prefWidth="600.0">
         <items>

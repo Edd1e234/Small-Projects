@@ -1,5 +1,7 @@
 package com.Flashcard.Backend;
 
+import com.Flashcard.Backend.Status.StatusUser;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -20,5 +22,22 @@ public class AllUsers {
 
     public void addUser(User user) {
         this.Users.put(user.getUserName(), user);
+    }
+
+    public StatusUser getUser(String username, String password) {
+        User user = Users.get(username);
+        StatusUser statusUser = new StatusUser();
+        if (user == null) {
+            statusUser.setStatus(false);
+            statusUser.setStatusMessage("User is not here.");
+            return statusUser;
+        }
+        if (!user.getPassword().equals(password)) {
+            statusUser.setStatus(false);
+            statusUser.setStatusMessage("Password is not correct");
+            return statusUser;
+        }
+        statusUser.setUser(user);
+        return statusUser;
     }
 }

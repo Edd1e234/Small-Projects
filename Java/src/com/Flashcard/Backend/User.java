@@ -7,11 +7,13 @@ import java.util.ArrayList;
 public class User {
     private String UserName;
     private String Date;
+    // Make sure to hash this.
+    private String password;
     private ArrayList<Class> Classes;
 
-    public User(String userName, String date) {
+    public User(String userName, String password) {
         UserName = userName;
-        Date = date;
+        password = password;
         this.Classes = new ArrayList<>();
     }
 
@@ -54,5 +56,13 @@ public class User {
         }
         userString.append("}");
         return userString.toString();
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

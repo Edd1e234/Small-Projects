@@ -17,6 +17,10 @@ public class User {
         this.Classes = new ArrayList<>();
     }
 
+    public User() {
+        this.Classes = new ArrayList<>();
+    }
+
     public String getUserName() {
         return UserName;
     }
